@@ -1,0 +1,207 @@
+@import url(https://fonts.googleapis.com/css?family=Exo+2:800);
+
+body{
+  /*background-color: darkslateblue;*/
+  font-size: 18px;  
+  /*font-family: "Helvetica Neue", sans-serif;*/  
+  overflow: hidden; /*---nem akarunk görgetősávokat a képernyőn :) */
+  background-image: url("../graphs/kerdojel.jpg");
+  background-position: center; 
+  background-repeat: no-repeat; 
+  background-size: cover; 
+  background-color: #c695dd;
+  background-blend-mode:multiply;  
+  
+}
+
+/*  ---------------------- Labdás rész CSS kezdet --------------------*/
+.ball {
+  position: absolute;
+  border-radius: 50%; /*itt lesz a négyzetből kör -> labda*/
+  opacity: 0.4;
+  z-index: 1;
+  text-align: center;
+  max-width: 100%;
+  margin: 0 auto;  
+  font-family: 'Exo';
+  font-weight: bolder;
+  text-shadow: 0px 0px 10px rgba(0, 0, 0, 0.6);
+
+}
+
+
+/*  ---------------------- Labdás rész CSS vége --------------------*/
+
+/*  ---------------------- Pöttyös Nyíl rész CSS kezdet --------------------*/
+
+  .pottyosNyil{
+    position: fixed;
+    bottom: 93px;
+    right: 70px;
+    border: 0.5rem;
+    z-index: 998;
+
+  }
+
+  .inext{
+   position: fixed;
+    bottom:  43px;
+    right:  75px;
+    font-size: large;
+    animation: animateBetu linear 4s infinite;
+    z-index: 999;
+  }
+
+  .potty {
+    position: absolute;
+    height: 15px;
+    width: 15px;
+    border-radius: 15px;
+    background-color: #300a88;
+    animation: animate linear 4s infinite;
+  }
+  .potty:nth-child(1) {
+    animation-delay: 0.9s;
+  }
+  .potty:nth-child(2) {
+    animation-delay: 1.1s;
+    transform: translate(18px, 13px);
+  }
+  .potty:nth-child(3) {
+    animation-delay: 1.3s;
+    transform: translate(35px, 25px);
+  }
+  .potty:nth-child(4) {
+    animation-delay: 1.1s;
+    transform: translate(18px, 38px);
+  }
+  .potty:nth-child(5) {
+    animation-delay: 0.9s;
+    transform: translate(0px, 50px);
+  }
+  .potty:nth-child(6) {
+    animation-delay: 0.9s;
+    transform: translate(0, 25px);
+  }
+  .potty:nth-child(7) {
+    animation-delay: 0.7s;
+    transform: translate(-20px, 25px);
+  }
+  .potty:nth-child(8) {
+    animation-delay: 0.5s;
+    transform: translate(-40px, 25px);
+  }
+  .potty:nth-child(9) {
+    animation-delay: 0.3s;
+    transform: translate(-60px, 25px);
+  }
+  .potty:nth-child(10) {
+    animation-delay: 0.1s;
+    transform: translate(-80px, 25px);
+  }
+  @keyframes animate {
+    0%{
+      background-color: #bd4ef0;
+    }
+    
+    50% {
+      background-color: rgb(237, 176, 245);
+    }
+    100% {
+      background-color: #6d48c5;
+    }
+  }
+
+  @keyframes animateBetu {
+    0%{
+      color: #bd4ef0;
+    }
+    
+    50% {
+      color: rgb(237, 176, 245);
+    }
+    100% {
+      color: #6d48c5;
+    }
+  }
+/*  ---------------------- Pöttyös Nyíl rész CSS vége --------------------*/
+
+
+/*  ---------------------- Neon szöveg rész CSS kezdete --------------------*/
+
+
+.neonDoboz {
+  margin-top: 12vh;
+  margin-left: 0vw;
+  z-index: 5; 
+  opacity: 1;  
+  animation: vibralas 8.5s 5s infinite alternate;
+}
+
+
+.neon, .neon2{
+  width: 300px;
+  height: 300px;
+ 
+}
+
+
+
+.neonText {
+  font-family: 'Exo 2', sans-serif;  
+  color: rgb(40, 7, 82);
+  padding: 5px;  
+
+}
+
+
+.neonNagy {
+  font-size: 180px;
+  font-weight: 900; 
+  text-align: center;
+  transform: rotate(-20deg);
+   
+}
+
+.neonKicsi {
+  font-size: 20px;
+  font-weight: 600;
+  text-align: center;
+  transform: rotate(-20deg); 
+ }
+
+
+
+
+
+/* Vibrálós effekt */
+@keyframes vibralas {
+    
+  0%, 18%, 22%, 25%, 53%, 57%, 100% {
+
+      text-shadow:
+      0 0 4px rgb(196, 187, 197), /*szöveg árnyékolással érhető el a 'kóna' kinézet, háttérszín fontos!*/
+      0 0 11px rgb(196, 187, 197), /*profi kinézetnél a 'blur' és 'opacity' jellemzőkkel is lehet finomítani*/
+      0 0 19px rgb(219, 172, 224),
+      0 0 40px rgb(64, 4, 77),
+      0 0 80px rgb(64, 4, 77),
+      0 0 90px rgb(64, 4, 77),
+      0 0 100px rgb(64, 4, 77),
+      0 0 150px rgb(37, 10, 44);
+  
+  }
+  
+  20%, 24%, 55% {        
+      text-shadow: none; /*maga a 'vibrálás' :)  - ciklusos a megjelenése a beállítás miatt
+      a 'trükk' lényege: oda-vissza (alternate) és végtelen (infinite) az 1-1, 1 miatti 'ciklus':
+      szünet, gyors-gyors, szünet, gyors, szünet, szünet, gyors, szünet, gyors-gyors-szünet --ismétlés*/
+  }    
+}
+
+
+
+
+
+
+
+/*  ---------------------- Neon szöveg rész CSS vége --------------------*/
