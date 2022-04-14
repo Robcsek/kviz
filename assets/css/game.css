@@ -1,0 +1,265 @@
+body{
+	margin:0;
+	padding:0;
+	font-family:"arial",heletica,sans-serif;
+	font-size:12px;
+    background-color: rgb(178, 67, 223);
+    background-blend-mode:multiply;
+    opacity: .7;
+    overflow: -moz-scrollbars-horizontal;
+    overflow: -moz-scrollbars-vertical;
+    overflow-y: auto;
+    overflow-x: hidden;
+    background: rgba(190, 100, 226, 0.7)  url("/assets/graphs/kerdojel.jpg");
+	-webkit-animation: 60s infinite linear alternate-reverse slideCsuszas;
+	-moz-animation: 60s infinite linear alternate-reverse slideCsuszas;
+	-ms-animation: 60s infinite linear alternate-reverse slideCsuszas;
+	-o-animation: 60s infinite linear alternate-reverse slideCsuszas;
+	animation: 60s  infinite linear alternate-reverse slideCsuszas;
+ 
+}
+ 
+@-webkit-keyframes slideCsuszas {
+	0% {
+      transform: scale(1) translateY(0);
+      transform-origin: 50% 84%;
+    }
+  
+    100% {
+      transform: scale(1.5) translateY(15px);
+      transform-origin: bottom;
+    }
+}
+ 
+@-moz-keyframes slideCsuszas {
+	from {background-position:0 0;}
+	to {background-position: 500px 0;}
+}
+ 
+@-ms-keyframes slideCsuszas {
+	from {background-position:0 0;}
+	to {background-position: 500px 0;}
+}
+ 
+@-o-keyframes slideCsuszas {
+	from {background-position:0 0;}
+	to {background-position: 500px 0;}
+}
+ 
+@keyframes slideCsuszas {
+	from {background-position:0 0;}
+	to {background-position: 500px 0;}
+}
+
+
+
+
+
+
+/*    -----------------------------    */
+
+#Game{	
+	height: auto;
+	margin: 0.4em auto;	
+	padding: 0.4em;
+	background: transparent;
+	text-align: center;
+	color: #FFF;
+	/*border: 0.25em solid rgb(71, 26, 129);*/
+	background-color: rgba(37, 9, 65, 0.7);
+	border-radius: 1em;
+	font-size: 1.1em;
+    font-family: "Raleway", sans-serif;
+   
+}
+
+
+
+
+#score{ 
+    margin: 0.1em auto;	
+	padding: 0.2em 0.2em;
+	background: transparent;
+	text-align: center;
+	color: #FFF;	    
+    font-size: 1.6em;
+    font-variant: small-caps;
+    font-weight: bolder;
+    
+
+}
+
+#choices { 
+    text-align: center;
+	color: #FFF;
+	/*border: 0.25em solid rgb(71, 26, 129);*/
+	background-color: rgba(37, 9, 65, 0.7);
+	border-radius: 1em;
+    /*width: 70%;*/
+    font-size: 1.5em;
+    font-variant: small-caps;
+    font-weight: bolder;
+    
+
+}
+
+#question{
+
+    margin: 0.1em auto;	
+	padding: 0.2em 0.2em;
+	background: transparent;
+    font-size: 1.4em;
+    font-weight: bolder;
+	text-align: center;
+	border-radius: 1em;
+    width: 90%;
+    height: 3em;           
+    background-color: rgb(227, 175, 250);
+    color: rgb(58, 2, 2);
+    font-family: sans-serif;
+    opacity: 0.7;
+    padding: 0.2em;
+
+}
+
+.choices_list{
+    text-decoration: none;
+}
+
+#correct {
+    margin: 0.1em auto;	
+	padding: 0.2em 0.2em;
+	background: transparent;
+	text-align: center;
+	border-radius: 1em;
+    width: 30%;       
+    display: inline-block;    
+    background-color: transparent;
+    color: transparent;
+    padding: 0.2em;
+   
+}
+
+#timeRemaining {
+    font-size: 1.2em;
+    font-weight: bold;
+    font-family: sans-serif;
+    margin: 0.1em auto;	
+	padding: 0.2em;	
+	text-align: center;
+	color: rgb(123, 250, 144);	
+	border-radius: 1em;
+    width: 33%;       
+    display: inline-block;
+}
+
+
+
+#wrong {
+    
+    margin: 0.1em auto;	
+	padding: 0.2em 0.2em;
+	background: transparent;
+	text-align: center;
+	border-radius: 1em;
+    width: 30%;       
+    display: inline-block;    
+    background-color: transparent;
+    color: transparent;
+    padding: 0.2em;
+}
+
+
+
+#instruction {
+    margin: 0.1em 25%;	
+	padding: 0.2em;
+	background: transparent;
+	text-align: center;
+	color: #FFF;
+	/*border: 0.25em solid rgb(71, 26, 129);*/
+	background-color: rgba(37, 9, 65, 0.7);
+	border-radius: 1em;
+    width: 50%;           
+    display: inline-block;
+   
+}
+
+
+.box {
+    text-align: left;
+    background-color: darkgray;
+    opacity: 0.8;
+    margin: 0.7em 1.3em 0.7em 0em;
+    
+    
+}
+
+
+
+.box:hover, #startReset:hover {
+    background-color: #9C89F6;
+    color: white;
+    -moz-box-shadow: 0 0 #6B54D3;
+    -webkit-box-shadow: 0 0 #6B54D3;
+    box-shadow: 0 0 #6B54D3;
+    top: 4px;
+}
+
+
+    
+
+#startReset {
+    width: 100px;
+    padding: 10px;
+    background-color: rgba(76, 13, 112, 0.5);
+    color: aquamarine;
+    font-weight: 900;
+    font-size: 2em;
+    margin: 0 auto;
+    border-radius: 0.4em;
+    cursor: pointer;
+    -moz-box-shadow: 0 4px rgba(0, 0, 0, 0.2);
+    -webkit-box-shadow: 0 4px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 4px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    position: relative;
+    -webkit-transition: all 0.2s;
+    -moz-transition: all 0.2s;
+    -o-transition: all 0.2s;
+    -ms-transition: all 0.2s;
+    transition: all 0.2s;
+
+}
+
+
+#gombok{
+    size: 50%;
+    margin: 0.4em 25%;
+    text-align: center;
+
+    
+}
+
+
+#gameOver {
+    margin: 0.1em 25%;	
+	padding: 0.5em 0.3em 0.2em 0.3em;
+	background: transparent;
+	text-align: center;
+	color: rgb(206, 98, 9);
+	border: 0.25em solid rgb(211, 98, 5);
+	background-color: rgba(37, 9, 65, 0.7);
+	border-radius: 1em;
+    width: 50%;
+    font-size: 1.6em;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bolder;
+
+    display: none;
+
+}
+#end{
+    color: rgb(206, 98, 9);
+    font-size: 20px;
+}
